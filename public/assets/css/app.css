@@ -125,8 +125,8 @@ table {
 .gap-4,
 .gap-5 { gap: var(--gap-md); }
 .space-y-1 > * + * { margin-top: .25rem; }
-.space-y-2 > * + *,
-.space-y-3 > * + *,
+.space-y-2 > * + * { margin-top: .5rem; }
+.space-y-3 > * + * { margin-top: .75rem; }
 .space-y-4 > * + * { margin-top: var(--gap-md); }
 .overflow-hidden { overflow: hidden; }
 .overflow-x-auto { overflow-x: auto; }
@@ -150,7 +150,7 @@ table {
 .bg-\[\#fff0ee\] { background: #fff0ee; }
 .bg-indigo-600 { background: #4f46e5; }
 .object-cover { object-fit: cover; }
-.p-3,
+.p-3 { padding: .75rem; }
 .p-4 { padding: var(--padding-card); }
 .px-1 { padding-left: .25rem; padding-right: .25rem; }
 .px-3 { padding-left: .75rem; padding-right: .75rem; }
@@ -3250,10 +3250,14 @@ body.app-shell.auth-page .auth-submit-button {
 }
 
 .app-surface .space-y-2 > * + *,
+.app-mobile-list .space-y-2 > * + * {
+    margin-top: .5rem !important;
+}
 .app-surface .space-y-3 > * + *,
+.app-mobile-list .space-y-3 > * + * {
+    margin-top: .75rem !important;
+}
 .app-surface .space-y-4 > * + *,
-.app-mobile-list .space-y-2 > * + *,
-.app-mobile-list .space-y-3 > * + *,
 .app-mobile-list .space-y-4 > * + * {
     margin-top: var(--gap-md) !important;
 }
