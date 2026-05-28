@@ -1,0 +1,28 @@
+<h1 class="text-3xl font-black">Criar conta</h1>
+<p class="mt-1 text-sm font-medium text-slate-500">Comece com uma base inspirada na sua planilha.</p>
+<?php if (!empty($error)): ?><p class="mt-4 rounded-2xl bg-red-50 p-3 text-sm font-bold text-red-600"><?= e($error) ?></p><?php endif; ?>
+<form method="post">
+    <?= csrf_field() ?>
+    <label class="block text-sm font-bold">Nome
+        <input class="app-input mt-2" type="text" name="name" value="<?= e($old['name'] ?? '') ?>" autocomplete="name" required>
+    </label>
+    <label class="block text-sm font-bold">E-mail
+        <input class="app-input mt-2" type="email" name="email" value="<?= e($old['email'] ?? '') ?>" autocomplete="email" required>
+    </label>
+    <label class="block text-sm font-bold">Senha
+        <span class="password-toggle-field mt-2">
+            <input class="app-input password-toggle-input" type="password" name="password" minlength="6" autocomplete="new-password" required>
+            <button class="password-toggle-button" type="button" data-password-toggle aria-label="Mostrar senha" title="Mostrar senha">
+                <span class="password-toggle-icon is-visible" data-password-icon="visible" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M12 5c5.23 0 9.27 3.36 10.8 6.45a1.3 1.3 0 0 1 0 1.1C21.27 15.64 17.23 19 12 19S2.73 15.64 1.2 12.55a1.3 1.3 0 0 1 0-1.1C2.73 8.36 6.77 5 12 5Zm0 2C8.04 7 4.8 9.42 3.34 12 4.8 14.58 8.04 17 12 17s7.2-2.42 8.66-5C19.2 9.42 15.96 7 12 7Zm0 2.2a2.8 2.8 0 1 1 0 5.6 2.8 2.8 0 0 1 0-5.6Zm0 2a.8.8 0 1 0 0 1.6.8.8 0 0 0 0-1.6Z" fill="currentColor"/></svg>
+                </span>
+                <span class="password-toggle-icon" data-password-icon="hidden" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M4.7 3.3 20.7 19.3l-1.4 1.4-3.3-3.3A13.07 13.07 0 0 1 12 19C6.77 19 2.73 15.64 1.2 12.55a1.3 1.3 0 0 1 0-1.1A13.67 13.67 0 0 1 6.2 6.5L3.3 3.7l1.4-1.4Zm2.95 4.36A11.44 11.44 0 0 0 3.34 12C4.8 14.58 8.04 17 12 17c1.03 0 2-.16 2.88-.46l-1.9-1.9a4.1 4.1 0 0 1-3.62-3.62L7.65 7.66ZM12 7c3.96 0 7.2 2.42 8.66 5a11.4 11.4 0 0 1-3.14 3.59l-1.44-1.44A4.8 4.8 0 0 0 12 9.2c-.35 0-.7.04-1.03.11L8.91 7.25C9.88 7.09 10.91 7 12 7Zm0 4.2a.8.8 0 0 0-.79.91l1.68 1.68a.8.8 0 0 0-.89-1.59Z" fill="currentColor"/></svg>
+                </span>
+            </button>
+        </span>
+    </label>
+    <button class="app-button auth-submit-button w-full">Criar Alpha</button>
+</form>
+<p class="auth-switch">Já tenho conta. <a href="<?= url('/login') ?>">Entrar</a></p>
+

@@ -1,0 +1,10 @@
+# Configurações sensíveis
+.env
+
+# Uploads de usuários (avatares, etc)
+public/uploads/*
+!public/uploads/.gitkeep
+
+# Logs e arquivos de sistema
+*.log
+.vscode/

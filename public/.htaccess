@@ -1,0 +1,26 @@
+Options -Indexes
+AddType application/manifest+json .webmanifest
+
+RewriteEngine On
+
+# Serve arquivos e diretórios existentes diretamente
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Rota limpa /login → login.html, /dashboard → index.html etc.
+RewriteRule ^login$        login.html    [L]
+RewriteRule ^register$     register.html [L]
+RewriteRule ^income$       income.html   [L]
+RewriteRule ^transactions$ transactions.html [L]
+RewriteRule ^bills$        bills.html    [L]
+RewriteRule ^cards$        cards.html    [L]
+RewriteRule ^categories$   categories.html [L]
+RewriteRule ^accounts$     accounts.html [L]
+RewriteRule ^commitments$  commitments.html [L]
+RewriteRule ^goals$        goals.html    [L]
+RewriteRule ^settings$     settings.html [L]
+RewriteRule ^roadmap$      roadmap.html  [L]
+
+# Qualquer outro caminho → index.html (dashboard)
+RewriteRule ^ index.html [L]

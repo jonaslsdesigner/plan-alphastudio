@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900" fill="none">
+  <rect width="900" height="900" fill="#113c6a"/>
+  <g opacity=".36">
+    <path d="M40 720C116 646 171 580 239 603C306 626 323 746 399 733C475 720 497 589 565 560C634 532 698 608 860 505" stroke="#7ce7f1" stroke-width="10" stroke-linecap="round"/>
+    <path d="M72 620H148V820H72V620Z" fill="#7ce7f1"/>
+    <path d="M188 534H264V820H188V534Z" fill="#5ba8ff"/>
+    <path d="M304 672H380V820H304V672Z" fill="#7ce7f1"/>
+    <path d="M420 474H496V820H420V474Z" fill="#5ba8ff"/>
+    <path d="M536 592H612V820H536V592Z" fill="#7ce7f1"/>
+  </g>
+  <g opacity=".24" stroke="#fff" stroke-width="2">
+    <path d="M90 186H396C427 186 452 211 452 242V418C452 449 427 474 396 474H90C59 474 34 449 34 418V242C34 211 59 186 90 186Z"/>
+    <path d="M82 244H406"/>
+    <path d="M112 306H374"/>
+    <path d="M112 358H292"/>
+    <path d="M112 410H338"/>
+  </g>
+  <g opacity=".24">
+    <circle cx="692" cy="244" r="146" stroke="#7ce7f1" stroke-width="22"/>
+    <path d="M692 98A146 146 0 0 1 838 244H692V98Z" fill="#7ce7f1"/>
+    <path d="M692 244L796 346" stroke="#fff" stroke-width="14" stroke-linecap="round"/>
+  </g>
+  <g opacity=".18" fill="#fff" font-family="Arial, sans-serif" font-size="56" font-weight="700">
+    <text x="62" y="126">R$ 12.903</text>
+    <text x="606" y="542">+18%</text>
+    <text x="586" y="644">IPVA</text>
+    <text x="640" y="734">2026</text>
+  </g>
+</svg>
